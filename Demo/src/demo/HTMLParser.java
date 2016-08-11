@@ -11,8 +11,8 @@ public class HTMLParser {
 		char[] cList = htmlText.toCharArray();
 		
 		for(int i=0; i<htmlText.length(); i++){
-			String charPrevious = (i>0) ? String.valueOf(cList[i-1]) : "NA";
-			String charNext = (i<htmlText.length()-1) ? String.valueOf(cList[i+1]) : "NA";
+			char charPrevious = (i>0) ? cList[i-1] : '#';
+			char charNext = (i<htmlText.length()-1) ? cList[i+1] : '#';
 			
 			char thisChar = cList[i];
 			output = modifyOutput(output, thisChar);
