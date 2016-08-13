@@ -15,7 +15,8 @@ public class HTMLParser {
 			char charNext = (i<htmlText.length()-1) ? cList[i+1] : '#';
 			
 			char thisChar = cList[i];
-			output = modifyOutput(output, thisChar);
+			String newOutput = modifyOutput(output, thisChar);
+			output = newOutput;
 		}
 		return output;
 	}

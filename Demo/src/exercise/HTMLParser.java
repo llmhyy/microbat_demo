@@ -16,7 +16,8 @@ public class HTMLParser {
 			String charNext = (i<htmlText.length()-1) ? String.valueOf(cList[i+1]) : "NA";
 			
 			char thisChar = cList[i];
-			output = modifyOutput(output, thisChar);
+			String newOutput = modifyOutput(output, thisChar);
+			output = newOutput;
 		}
 		return output;
 	}
