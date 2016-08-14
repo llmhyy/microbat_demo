@@ -16,8 +16,7 @@ public class HTMLParser {
 			String charNext = (i<htmlText.length()-1) ? String.valueOf(cList[i+1]) : "NA";
 			
 			char thisChar = cList[i];
-			String newOutput = modifyOutput(output, thisChar);
-			output = newOutput;
+			output = modifyOutput(output, thisChar);
 		}
 		return output;
 	}
@@ -42,9 +41,11 @@ public class HTMLParser {
 	public static void main(String[] args) {
 		HTMLParser main = new HTMLParser();
 		String input = "<a>\"test\"</a>";
+//		String input = "<a href=\">\">test</a>";
 		
 		String output = main.removeTag(input);
 		System.out.println(output.equals("\"test\""));
+//		System.out.println(output.equals("test"));
 
 	}
 
