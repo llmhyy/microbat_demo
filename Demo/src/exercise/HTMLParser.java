@@ -29,7 +29,7 @@ public class HTMLParser {
 		else if(c == '>' && !quote){
 			tag = false;
 		}
-		else if(c == '"' || c == '\'' && tag){
+		else if(c == '\"' || c == '\'' && tag){
 			quote = !quote;
 		}
 		else if(!tag){
